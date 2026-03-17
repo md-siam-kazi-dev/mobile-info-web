@@ -1,4 +1,4 @@
-// common Nav Bar function 
+// common Nav Bar function
 
 const NavBar = () => {
   return (
@@ -7,16 +7,16 @@ const NavBar = () => {
         <a className="btn btn-ghost text-xl">PHONEMARKET</a>
       </div>
       <div className="flex gap-2">
-        <label class="input">
+        <label className="input">
           <svg
-            class="h-[1em] opacity-50"
+            className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
             <g
-              stroke-linejoin="round"
-              stroke-linecap="round"
-              stroke-width="2.5"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+              strokeWidth="2.5"
               fill="none"
               stroke="currentColor"
             >
@@ -26,7 +26,7 @@ const NavBar = () => {
           </svg>
           <input type="search" required placeholder="Search Phone" />
         </label>
-        <button class="btn btn-neutral">Search</button>
+        <button className="btn btn-neutral">Search</button>
       </div>
     </div>
   );
