@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
 const PhoneCard = ({ phone }) => {
   console.log(phone);
   return (
-    <div className="border py-4 flex flex-col  justify-between items-center rounded-xl w-[300px] h-[350px] border-gray-300">
+    <Link to={`/phones/${phone.slug}`}>
+      <div className="border py-4 flex flex-col  justify-between items-center rounded-xl w-[300px] h-[350px] border-gray-300">
       <img className="mx-auto"
         src={phone.image_url}
         
@@ -13,7 +16,8 @@ const PhoneCard = ({ phone }) => {
       <div className="mx-auto text-gray-400 w-fit font-semibold text-[16px]">Rating:{phone.rating}</div>
       
       </div>
-    </div>
+      </div>
+    </Link>
   );
 };
 export default PhoneCard;
