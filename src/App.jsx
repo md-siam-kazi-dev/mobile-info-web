@@ -11,15 +11,13 @@ const router = createBrowserRouter([
     {
       path:'/',
       element:<Root />,
-      children:[
-        {index:true,element:<HomePage />},
-        {
-          path:'phones/:phoneId',
-          loader : ({params})=>fetch(api+`/api/phones/${params.phoneId}`),
-          element:<SinglePhonePage />
-        }
 
-      ]
+      
+    },
+    {
+      path:'/phones/:phoneId',
+      loader:({params}) => fetch(`${api}/api/phones/${params.phoneId}`),
+      element:<SinglePhonePage />,
     }
 ])
 

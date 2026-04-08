@@ -6,6 +6,8 @@
 //   .container-div { @apply max-w-[1440px] mx-auto sm:w-[90%] md:w-[85%]; }
 
 import { useLoaderData, useParams } from "react-router-dom";
+import { api } from "../utils/api";
+import { useEffect } from "react";
 
 const phone = {
   id: 159427,
@@ -145,14 +147,24 @@ const COLOR_MAP = {
 };
 
 // ── Main Component ────────────────────────────────────────────────────────────
-export default function SinglePhonePage() {
-   const phoneData = useLoaderData();
-   const p = phoneData.data
-   console.log(p);
+export default  function SinglePhonePage() {
+
+  const data = useLoaderData();
+  console.log(data);
+  
+   const p = data.data;
+
+   useEffect(() => {
+    window.scrollTo(0,0)
+   })
+   
+
+   
+   
 
   return (
     // data-theme="night" → DaisyUI dark theme; swap to "light" / "corporate" etc.
-    <div data-theme="night" className="min-h-screen bg-base-100 font-[Syne,sans-serif]">
+    <div data-theme="night" className="min-h-screen px-5 bg-base-100 font-[Syne,sans-serif]">
       {/* ── Breadcrumb nav ───────────────────────────────────────────────── */}
       <div className="bg-base-200 border-b border-base-300 py-2">
         <div className="container-div">
