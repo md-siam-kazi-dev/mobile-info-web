@@ -5,7 +5,7 @@
 //   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap');
 //   .container-div { @apply max-w-[1440px] mx-auto sm:w-[90%] md:w-[85%]; }
 
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { api } from "../utils/api";
 import { useEffect } from "react";
 
@@ -149,14 +149,15 @@ const COLOR_MAP = {
 // ── Main Component ────────────────────────────────────────────────────────────
 export default  function SinglePhonePage() {
 
+  let p ;
+  useEffect(() => {
+    
+    window.scrollTo(0,0);
+  })
   const data = useLoaderData();
-  console.log(data);
-  
-   const p = data.data;
+    p = data.data;
 
-   useEffect(() => {
-    window.scrollTo(0,0)
-   })
+   
    
 
    
@@ -170,7 +171,7 @@ export default  function SinglePhonePage() {
         <div className="container-div">
           <div className="breadcrumbs text-xs text-base-content/40 font-mono py-0">
             <ul>
-              <li><a className="hover:text-primary">Home</a></li>
+              <li><Link to="/" className="hover:text-primary">Home</Link></li>
               <li><a className="hover:text-primary">Phones</a></li>
               <li><a className="hover:text-primary">{p.brand}</a></li>
               <li className="text-base-content/70">{p.model}</li>

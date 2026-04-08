@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const PhoneCard = ({ phone }) => {
-  console.log(phone);
+ 
   return (
     <Link to={`/phones/${phone.slug}`}>
       <div className="border py-4 flex flex-col  justify-between items-center rounded-xl w-[300px] h-[350px] border-gray-300">

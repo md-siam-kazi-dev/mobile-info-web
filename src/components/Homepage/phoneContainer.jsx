@@ -9,7 +9,7 @@ const PhoneContainer = ({phonePromis}) =>{
 
         {phones.map(phone => {
             return(
-                <><PhoneCard key= {phone.id} phone = {phone}></PhoneCard></>
+                <PhoneCard key={phone.id} phone = {phone}></PhoneCard>
             )
         })}
         </div>
